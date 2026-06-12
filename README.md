@@ -13,6 +13,43 @@ Equations Used:
 6. eDSBSC2 = em2 * ec2
 7. eLSB = eDSBSC1 + eDSBSC2
 8. eUSB = eDSBSC1 - eDSBSC2
+9. THEORY
+
+Single Sideband Suppressed Carrier (SSB-SC) modulation is a form of amplitude modulation in which only one sideband (either Upper Sideband or Lower Sideband) is transmitted while the carrier and the other sideband are suppressed.
+
+Since only one sideband carries all the information of the message signal, SSB-SC requires less bandwidth and transmits power more efficiently than conventional AM and DSB-SC systems.
+
+The message signal is given by:
+
+em(t) = Am cos(2πfmt)
+
+The carrier signal is given by:
+
+ec(t) = Ac cos(2πfct)
+
+The DSB-SC signal is given by:
+
+edsbsc(t) = em(t) × ec(t)
+
+Using the phase shift method, the Lower Sideband (LSB) and Upper Sideband (USB) signals are generated as:
+
+LSB = edsbsc1 + edsbsc2
+
+USB = edsbsc1 – edsbsc2
+
+where,
+
+Am = Amplitude of the message signal
+Ac = Amplitude of the carrier signal
+fm = Frequency of the message signal
+fc = Frequency of the carrier signal
+
+Advantages of SSB-SC:
+• Reduced bandwidth requirement.
+• Efficient utilization of transmitted power.
+• Reduced interference and noise effects.
+
+Thus, SSB-SC modulation transmits only one sideband, thereby improving bandwidth and power efficiency.
 
 
 Algorithm
@@ -64,15 +101,16 @@ plot(t,eusb);
 
 
 ```
-MODEL GRAPH
- <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/55326c5b-7dd5-4873-aaf6-d219bb7c4420" />
- TABULATION:
-<img width="637" height="332" alt="image" src="https://github.com/user-attachments/assets/7ff79056-9cf7-4ff0-a385-703060457972" />
-Calculation
-<img width="648" height="362" alt="image" src="https://github.com/user-attachments/assets/07db08ba-635e-410e-914a-efc758fa6b82" />
 
-Output Waveform
-<img width="760" height="580" alt="image" src="https://github.com/user-attachments/assets/3efbd926-dbb4-4692-9040-b72d6a7faf32" />
+ TABULATION:
+ 
+ <img width="642" height="347" alt="image" src="https://github.com/user-attachments/assets/8e47ad58-c559-4606-88fc-2308ae1530f4" />
+
+
+
+Output Waveform:
+
+<img width="742" height="691" alt="image" src="https://github.com/user-attachments/assets/ef6022a6-530a-4d59-9c2d-252e518c788a" />
 
 RESULT:
-Thus the amplitude modulation and demodulation is experimentally done and the output is verified.
+Thus, the Single Sideband Suppressed Carrier (SSB-SC) signal is generated using the phase shift method and the corresponding Upper Sideband (USB) and Lower Sideband (LSB) waveforms are obtained and verified.
